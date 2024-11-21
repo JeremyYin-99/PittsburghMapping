@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles.css') }}">
+    {% block head %}
+    {% endblock %}
+    <title>{% block title %}{% endblock %}Jeremy Yin</title>
+</head>
+<body>
+<nav>
+    <div class="logo">Port Authority</div>
+    <a href="/" class="navbar">Home</a>
+    <a href="/routes" class="navbar">Bus Routes</a>
+    <a href="#" class="navbar navend"></a>
+</nav>
+
+<div id="content">{% block content %}{% endblock %}</div>
+
+<footer>Jeremy Yin 12-780 Advanced Python</footer>
+
+</body>
+</html>

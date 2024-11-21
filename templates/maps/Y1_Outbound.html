@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d1d978ce12dd4dcf9987cab880c81e94 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_d1d978ce12dd4dcf9987cab880c81e94" ></div>
+        
+</body>
+<script>    
+    
+            var map_d1d978ce12dd4dcf9987cab880c81e94 = L.map(
+                "map_d1d978ce12dd4dcf9987cab880c81e94",
+                {
+                    center: [40.441, -79.99],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_22df0421da1949cfbaff85c18b0086f8 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_d1d978ce12dd4dcf9987cab880c81e94);
+        
+    
+            var feature_group_a8df235a586a415ebad826f19b1030d8 = L.featureGroup(
+                {}
+            ).addTo(map_d1d978ce12dd4dcf9987cab880c81e94);
+        
+    
+            var poly_line_bcb48d5e9fd94eadb58771b663203838 = L.polyline(
+                [[40.44159299999952, -79.99826000000067], [40.44164, -79.99823], [40.44145, -79.99775], [40.440384, -79.998502], [40.44023200000057, -79.99860899999877], [40.439727, -79.998944], [40.439558000000304, -79.99905500000085], [40.438459, -79.999793], [40.43830200000052, -79.9998980000012], [40.436979, -80.000783], [40.436890999999584, -80.00084199999931], [40.43512, -80.00197], [40.43295, -80.00346], [40.43295999999952, -80.00349399999855], [40.43295, -80.00346], [40.43289, -80.0035], [40.43289, -80.00351], [40.432104, -80.004048], [40.431892, -80.004305], [40.427432, -80.005099], [40.424742, -80.005657], [40.424301, -80.0057], [40.422749, -80.006031], [40.422112, -80.00632], [40.421737, -80.006406], [40.4215, -80.006556], [40.421187, -80.006898], [40.42109000000042, -80.00709699999906], [40.420492, -80.008159], [40.420047, -80.008797], [40.419692, -80.009516], [40.419137, -80.010374], [40.418638, -80.011023], [40.418332, -80.011334], [40.41794, -80.01156], [40.417564, -80.011721], [40.417094, -80.011849], [40.416278, -80.011839], [40.41609999999956, -80.0118210000003], [40.413489, -80.011002], [40.41259, -80.009286], [40.412182, -80.008749], [40.412011, -80.008648], [40.41184099999876, -80.00854699999935], [40.410607, -80.008055], [40.410391, -80.007935], [40.410085, -80.007636], [40.409473, -80.006571], [40.409258, -80.00628], [40.40897, -80.006017], [40.408846, -80.005933], [40.408371, -80.005828], [40.407214, -80.005984], [40.406876, -80.005966], [40.406433, -80.005814], [40.406029, -80.005561], [40.405791, -80.005282], [40.404387, -80.003266], [40.40401, -80.002871], [40.403663, -80.002586], [40.402975, -80.002324], [40.40287499999868, -80.00230399999846], [40.402607, -80.002149], [40.401804, -80.001992], [40.400582, -80.001569], [40.399932, -80.001376], [40.398677, -80.001163], [40.398258, -80.001004], [40.397037, -80.000296], [40.396362, -79.99997], [40.395665, -79.999741], [40.39554599999904, -79.99971700000123], [40.394624, -79.999227], [40.39385, -79.998742], [40.392614, -79.998443], [40.39255499999916, -79.9984330000013], [40.391829, -79.998279], [40.390411, -79.99822], [40.39035999999905, -79.99822200000047], [40.389707, -79.998164], [40.389009, -79.998], [40.388557, -79.997801], [40.388064, -79.997513], [40.387757, -79.997267], [40.38767399999919, -79.99720400000166], [40.38683, -79.996306], [40.386492, -79.996022], [40.3862, -79.995873], [40.385845, -79.995801], [40.385419, -79.995862], [40.385267999999606, -79.99590200000087], [40.384921, -79.995914], [40.384059, -79.99606], [40.383741, -79.996142], [40.383424, -79.996279], [40.382953, -79.996684], [40.38285200000109, -79.99678100000085], [40.382738, -79.996856], [40.38247, -79.99603], [40.38198, -79.99591], [40.38158, -79.9957], [40.38119, -79.99539], [40.38007, -79.99429], [40.37933, -79.99377], [40.37899, -79.9935], [40.37861, -79.99295], [40.37847, -79.99233], [40.37843, -79.99195], [40.37848, -79.99099], [40.37846, -79.99019], [40.37841, -79.98976], [40.37828, -79.98913], [40.3781, -79.98852], [40.37735, -79.98665], [40.3768, -79.98534], [40.37657, -79.98486], [40.37613, -79.98416], [40.37569, -79.98364], [40.37566400000039, -79.98368800000169], [40.37569, -79.98364], [40.37496, -79.98293], [40.37496, -79.98292], [40.37427, -79.98248], [40.3736, -79.98219], [40.37297, -79.98203], [40.37249, -79.98198], [40.37191, -79.98199], [40.37125, -79.98211], [40.37078, -79.98227], [40.370795999999, -79.98234799999966], [40.37078, -79.98227], [40.36639, -79.98445], [40.36593, -79.98464], [40.36554, -79.98472], [40.36493, -79.98469], [40.36444, -79.98451], [40.364, -79.98425], [40.363980000001, -79.98432399999925], [40.364, -79.98425], [40.36203, -79.98298], [40.36129, -79.98255], [40.360515, -79.982252], [40.35937, -79.98191], [40.35862, -79.98161], [40.35806, -79.98132], [40.35673, -79.98042], [40.35670200000048, -79.98048700000052], [40.35673, -79.98042], [40.35504, -79.97926], [40.35351, -79.97833], [40.35055, -79.97673], [40.34995, -79.97632], [40.34926, -79.97571], [40.34832, -79.9747], [40.34776, -79.97421], [40.34731, -79.97391], [40.34681, -79.97365], [40.34535, -79.97304], [40.34503, -79.97286], [40.34464, -79.97252], [40.34434, -79.97215], [40.34408, -79.97166], [40.34404400000077, -79.97174000000143], [40.34408, -79.97166], [40.34382, -79.97102], [40.34373, -79.9709], [40.34293, -79.96878], [40.34294, -79.96867], [40.34264, -79.96789], [40.34258, -79.96783], [40.34257, -79.96783], [40.34213, -79.96673], [40.34210199999927, -79.96675099999838], [40.34213, -79.96673], [40.34195, -79.96635], [40.34064, -79.96456], [40.34054, -79.96433], [40.34049399999914, -79.96438900000035], [40.34054, -79.96433], [40.34017, -79.96382], [40.33978, -79.96315], [40.3394, -79.96227], [40.33921, -79.96168], [40.33902, -79.96081], [40.33896, -79.96042], [40.33891, -79.95973], [40.33901, -79.95694], [40.33901, -79.95627], [40.33894, -79.95545], [40.33883, -79.9548], [40.33869, -79.95422], [40.3384, -79.95337], [40.33825, -79.95311], [40.33668, -79.949], [40.33637, -79.94838], [40.33609, -79.94794], [40.335583, -79.947334], [40.335229, -79.947059], [40.335487, -79.946429], [40.335595, -79.946308], [40.336085, -79.946121], [40.336151, -79.946828], [40.336363, -79.946781], [40.336307, -79.946105], [40.33628800000099, -79.94588000000121], [40.336337, -79.94553], [40.336164, -79.945467], [40.336085, -79.946119], [40.336098, -79.946262], [40.335702, -79.94637], [40.33557, -79.946481], [40.335321, -79.947126], [40.33494, -79.94685], [40.33467, -79.94672], [40.33179, -79.94579], [40.32808, -79.94481], [40.328064999999086, -79.94489799999947], [40.32808, -79.94481], [40.32628, -79.94435], [40.32517, -79.94398], [40.32121, -79.94223], [40.32118400000089, -79.94231799999878], [40.32121, -79.94223], [40.31431, -79.93919], [40.3142, -79.93921], [40.31249, -79.93845], [40.31233, -79.93837], [40.31228, -79.93828], [40.31071, -79.93761], [40.31062, -79.93765], [40.30896, -79.93691], [40.30896, -79.9369], [40.30895, -79.9369], [40.30893, -79.93683], [40.30826, -79.93645], [40.30631, -79.93516], [40.30588, -79.93482], [40.30536, -79.9343], [40.30225, -79.93089], [40.30177, -79.93032], [40.30144, -79.92982], [40.3012, -79.92933], [40.30105, -79.92893], [40.30086, -79.92814], [40.30078, -79.9273], [40.3008, -79.92469], [40.30075, -79.92397], [40.30058, -79.92322], [40.30043, -79.9228], [40.30015, -79.92224], [40.29981, -79.92177], [40.29945, -79.92142], [40.29806, -79.92045], [40.29796, -79.92045], [40.29609, -79.91916], [40.29601, -79.919], [40.29531, -79.91852], [40.29521, -79.91853], [40.29423, -79.91783], [40.29366, -79.91725], [40.29237, -79.91563], [40.29258, -79.91536], [40.29266, -79.91512], [40.29272, -79.91364], [40.292693, -79.913331], [40.292525, -79.912755], [40.292701, -79.91258], [40.292554, -79.911953], [40.29254, -79.911706], [40.292634, -79.911406], [40.293002, -79.911039], [40.29314300000085, -79.91091200000052], [40.294744, -79.910358], [40.29487500000106, -79.91038299999967]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a8df235a586a415ebad826f19b1030d8);
+        
+    
+        var popup_a5cfee03d33a4880aec8257db2e30f35 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e20eda7ebd954a27965b4c79a2e3fd72 = $(`<div id="html_e20eda7ebd954a27965b4c79a2e3fd72" style="width: 100.0%; height: 100.0%;">Y1</div>`)[0];
+            popup_a5cfee03d33a4880aec8257db2e30f35.setContent(html_e20eda7ebd954a27965b4c79a2e3fd72);
+        
+
+        poly_line_bcb48d5e9fd94eadb58771b663203838.bindPopup(popup_a5cfee03d33a4880aec8257db2e30f35)
+        ;
+
+        
+    
+    
+            var feature_group_93ecf0991697463c9f45f199018821fa = L.featureGroup(
+                {}
+            ).addTo(map_d1d978ce12dd4dcf9987cab880c81e94);
+        
+    
+            var marker_dd3318acd14c42aab527793f7833ad17 = L.marker(
+                [40.44159299999952, -79.99826000000067],
+                {}
+            ).addTo(feature_group_93ecf0991697463c9f45f199018821fa);
+        
+    
+        var popup_0cda012960d14763b9390e078d1c72db = L.popup({"maxWidth": "100%"});
+
+        
+            var html_35be873361724ba8a098fd9390910139 = $(`<div id="html_35be873361724ba8a098fd9390910139" style="width: 100.0%; height: 100.0%;"> SIXTH AVE + SMITHFIELD</div>`)[0];
+            popup_0cda012960d14763b9390e078d1c72db.setContent(html_35be873361724ba8a098fd9390910139);
+        
+
+        marker_dd3318acd14c42aab527793f7833ad17.bindPopup(popup_0cda012960d14763b9390e078d1c72db)
+        ;
+
+        
+    
+    
+            var marker_9656a76e2b2f44be8e2780cf268a126a = L.marker(
+                [40.44023200000057, -79.99860899999877],
+                {}
+            ).addTo(feature_group_93ecf0991697463c9f45f199018821fa);
+        
+    
+        var popup_0d304cbfe76d4a67bd3dda3dab02239e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_12b23fd4b508492fb889728982b7c8a2 = $(`<div id="html_12b23fd4b508492fb889728982b7c8a2" style="width: 100.0%; height: 100.0%;"> SMITHFIELD ST AT FIFTH AVE</div>`)[0];
+            popup_0d304cbfe76d4a67bd3dda3dab02239e.setContent(html_12b23fd4b508492fb889728982b7c8a2);
+        
+
+        marker_9656a76e2b2f44be8e2780cf268a126a.bindPopup(popup_0d304cbfe76d4a67bd3dda3dab02239e)
+        ;
+
+        
+    
+    
+            var marker_ddb5fc8938394cf7a9e3aecb11fa471c = L.marker(
+                [40.439558000000304, -79.99905500000085],
+                {}
+            ).addTo(feature_group_93ecf0991697463c9f45f199018821fa);
+        
+    
+        var popup_d3091b57868640d68e5abd157e07de46 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9233331ad4ad41c2828703b3d30eb9ce = $(`<div id="html_9233331ad4ad41c2828703b3d30eb9ce" style="width: 100.0%; height: 100.0%;"> SMITHFIELD ST + FORBES AVE</div>`)[0];
+            popup_d3091b57868640d68e5abd157e07de46.setContent(html_9233331ad4ad41c2828703b3d30eb9ce);
+        
+
+        marker_ddb5fc8938394cf7a9e3aecb11fa471c.bindPopup(popup_d3091b57868640d68e5abd157e07de46)
+        ;
+
+        
+    
+    
+            var marker_9b45a79f6fa44774bb45e6f1f249c0ea = L.marker(
+                [40.43830200000052, -79.9998980000012],
+                {}
+            ).addTo(feature_group_93ecf0991697463c9f45f199018821fa);
+        
+    
+        var popup_d149977bc1674dcd9dc2543a6dcecc08 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_201049080e3a4bad9d918318dfaa08bd = $(`<div id="html_201049080e3a4bad9d918318dfaa08bd" style="width: 100.0%; height: 100.0%;"> SMITHFIELD ST + THIRD AVE</div>`)[0];
+            popup_d149977bc1674dcd9dc2543a6dcecc08.setContent(html_201049080e3a4bad9d918318dfaa08bd);
+        
+
+        marker_9b45a79f6fa44774bb45e6f1f249c0ea.bindPopup(popup_d149977bc1674dcd9dc2543a6dcecc08)
+        ;
+
+        
+    
+    
+            var marker_d3b18f8edcbb4394953fd562b252198f = L.marker(
+                [40.436890999999584, -80.00084199999931],
+                {}
+            ).addTo(feature_group_93ecf0991697463c9f45f199018821fa);
+        
+    
+        var popup_5af32d278a4a4921973abeb1888d4eda = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6383616e2300429c956b2fb4d09abcb4 = $(`<div id="html_6383616e2300429c956b2fb4d09abcb4" style="width: 100.0%; height: 100.0%;"> SMITHFIELD ST + FT PITT BLVD</div>`)[0];
+            popup_5af32d278a4a4921973abeb1888d4eda.setContent(html_6383616e2300429c956b2fb4d09abcb4);
+        
+
+        marker_d3b18f8edcbb4394953fd562b252198f.bindPopup(popup_5af32d278a4a4921973abeb1888d4eda)
+        ;
+
+        
+    
+    
+            var marker_0e0566eccb4b4cea82a682c6c8191608 = L.marker(
+                [40.43295999999952, -80.00349399999855],
+                {}
+            ).addTo(feature_group_93ecf0991697463c9f45f199018821fa);
+        
+    
+        var popup_e2cb4bcb709a4b6bbfee7abff0ff7db1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_10396582db7b44f2afda95a4a328f63a = $(`<div id="html_10396582db7b44f2afda95a4a328f63a" style="width: 100.0%; height: 100.0%;"> SMITHFIELD ST BRIDGE + STATION SQUARE</div>`)[0];
+            popup_e2cb4bcb709a4b6bbfee7abff0ff7db1.setContent(html_10396582db7b44f2afda95a4a328f63a);
+        
+
+        marker_0e0566eccb4b4cea82a682c6c8191608.bindPopup(popup_e2cb4bcb709a4b6bbfee7abff0ff7db1)
+        ;
+
+        
+    
+    
+            var marker_40203fa255534264992c9d24bff6dbbf = L.marker(
+                [40.42109000000042, -80.00709699999906],
+                {}
+            ).addTo(feature_group_93ecf0991697463c9f45f199018821fa);
+        
+    
+        var popup_45c23a5f7b3249518275f6299eebe0f6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6d66a248a0844d53873ca4af7c995b94 = $(`<div id="html_6d66a248a0844d53873ca4af7c995b94" style="width: 100.0%; height: 100.0%;"> SOUTH BUSWAY + SOUTH HILLS JCT</div>`)[0];
+            popup_45c23a5f7b3249518275f6299eebe0f6.setContent(html_6d66a248a0844d53873ca4af7c995b94);
+        
+
+        marker_40203fa255534264992c9d24bff6dbbf.bindPopup(popup_45c23a5f7b3249518275f6299eebe0f6)
+        ;
+
+        
+    
+    
+            var marker_c17af29073a8407c91d7f006f218ed11 = L.marker(
+                [40.41609999999956, -80.0118210000003],
+                {}
+            ).addTo(feature_group_93ecf0991697463c9f45f199018821fa);
+        
+    
+        var popup_197dfad150be42d3b6550fd372674c20 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4739a15320d54da3b88725281be48d7e = $(`<div id="html_4739a15320d54da3b88725281be48d7e" style="width: 100.0%; height: 100.0%;"> SOUTH BUSWAY + PALM GARDEN</div>`)[0];
+            popup_197dfad150be42d3b6550fd372674c20.setContent(html_4739a15320d54da3b88725281be48d7e);
+        
+
+        marker_c17af29073a8407c91d7f006f218ed11.bindPopup(popup_197dfad150be42d3b6550fd372674c20)
+        ;
+
+        
+    
+    
+            var marker_abc0dc7cb8974b78ab10dbdb7c709aba = L.marker(
+                [40.41184099999876, -80.00854699999935],
+                {}
+            ).addTo(feature_group_93ecf0991697463c9f45f199018821fa);
+        
+    
+        var popup_808e51d284184c14a9cf77c7f0365469 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_83c162f4f98d4c8ca2b1873eac1a6f0b = $(`<div id="html_83c162f4f98d4c8ca2b1873eac1a6f0b" style="width: 100.0%; height: 100.0%;"> SOUTH BUSWAY + PIONEER AVE RAMP FS</div>`)[0];
+            popup_808e51d284184c14a9cf77c7f0365469.setContent(html_83c162f4f98d4c8ca2b1873eac1a6f0b);
+        
+
+        marker_abc0dc7cb8974b78ab10dbdb7c709aba.bindPopup(popup_808e51d284184c14a9cf77c7f0365469)
+        ;
+
+        
+    
+    
+            var marker_9b554c3153d842a887a5a930ac75d9c4 = L.marker(
+                [40.40287499999868, -80.00230399999846],
+                {}
+            ).addTo(feature_group_93ecf0991697463c9f45f199018821fa);
+        
+    
+        var popup_9c9dbf09b8ca480ca8c360a9bbf922b6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d86374a68caa49d282ef1b0a3a894b66 = $(`<div id="html_d86374a68caa49d282ef1b0a3a894b66" style="width: 100.0%; height: 100.0%;"> SOUTH BUSWAY + EDGEBROOK SHELTER</div>`)[0];
+            popup_9c9dbf09b8ca480ca8c360a9bbf922b6.setContent(html_d86374a68caa49d282ef1b0a3a894b66);
+        
+
+        marker_9b554c3153d842a887a5a930ac75d9c4.bindPopup(popup_9c9dbf09b8ca480ca8c360a9bbf922b6)
+        ;
+
+        
+    
+    
+            var marker_a93cce670daf4a4fa4e2adf892751ffe = L.marker(
+                [40.39554599999904, -79.99971700000123],
+                {}
+            ).addTo(feature_group_93ecf0991697463c9f45f199018821fa);
+        
+    
+        var popup_a49bc68018a74122a43f5ad9e1641737 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8882750b311d4e53bc94e91896529cb0 = $(`<div id="html_8882750b311d4e53bc94e91896529cb0" style="width: 100.0%; height: 100.0%;"> SOUTH BUSWAY + WHITED ST SHELTER</div>`)[0];
+            popup_a49bc68018a74122a43f5ad9e1641737.setContent(html_8882750b311d4e53bc94e91896529cb0);
+        
+
+        marker_a93cce670daf4a4fa4e2adf892751ffe.bindPopup(popup_a49bc68018a74122a43f5ad9e1641737)
+        ;
+
+        
+    
+    
+            var marker_14e05467fa164175b4b366a6bd119802 = L.marker(
+                [40.39255499999916, -79.9984330000013],
+                {}
+            ).addTo(feature_group_93ecf0991697463c9f45f199018821fa);
+        
+    
+        var popup_b734aa8aa54e49bd89849c4b9e5fd8c8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0bccecc4981d4cc8b524f4b691d155de = $(`<div id="html_0bccecc4981d4cc8b524f4b691d155de" style="width: 100.0%; height: 100.0%;"> SOUTH BUSWAY + SOUTH BANK</div>`)[0];
+            popup_b734aa8aa54e49bd89849c4b9e5fd8c8.setContent(html_0bccecc4981d4cc8b524f4b691d155de);
+        
+
+        marker_14e05467fa164175b4b366a6bd119802.bindPopup(popup_b734aa8aa54e49bd89849c4b9e5fd8c8)
+        ;
+
+        
+    
+    
+            var marker_7af5092ae86a4a0dbaa08d3a52889c21 = L.marker(
+                [40.39035999999905, -79.99822200000047],
+                {}
+            ).addTo(feature_group_93ecf0991697463c9f45f199018821fa);
+        
+    
+        var popup_7663c5995f374fa0bb9e655cbd5c4db1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ffa90658cb6142228b84df25beb0c9b4 = $(`<div id="html_ffa90658cb6142228b84df25beb0c9b4" style="width: 100.0%; height: 100.0%;"> SOUTH BUSWAY + CENTRAL SHELTER</div>`)[0];
+            popup_7663c5995f374fa0bb9e655cbd5c4db1.setContent(html_ffa90658cb6142228b84df25beb0c9b4);
+        
+
+        marker_7af5092ae86a4a0dbaa08d3a52889c21.bindPopup(popup_7663c5995f374fa0bb9e655cbd5c4db1)
+        ;
+
+        
+    
+    
+            var marker_271836fbe1d6412ebf2e2b6f1e8e4e09 = L.marker(
+                [40.38767399999919, -79.99720400000166],
+                {}
+            ).addTo(feature_group_93ecf0991697463c9f45f199018821fa);
+        
+    
+        var popup_53e727ba94d8465490c4a52fef3bae90 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e51bee2dab86471b9983bf5dc18fdc39 = $(`<div id="html_e51bee2dab86471b9983bf5dc18fdc39" style="width: 100.0%; height: 100.0%;"> SOUTH BUSWAY + INGLEWOOD SHELTER</div>`)[0];
+            popup_53e727ba94d8465490c4a52fef3bae90.setContent(html_e51bee2dab86471b9983bf5dc18fdc39);
+        
+
+        marker_271836fbe1d6412ebf2e2b6f1e8e4e09.bindPopup(popup_53e727ba94d8465490c4a52fef3bae90)
+        ;
+
+        
+    
+    
+            var marker_a72459ee7c0d4c7d86bf3a14466907c0 = L.marker(
+                [40.385267999999606, -79.99590200000087],
+                {}
+            ).addTo(feature_group_93ecf0991697463c9f45f199018821fa);
+        
+    
+        var popup_a19c1c7434e64ed38875db5c607526c3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4aae09958a98495db35949dae09e1d6f = $(`<div id="html_4aae09958a98495db35949dae09e1d6f" style="width: 100.0%; height: 100.0%;"> SOUTH BUSWAY + OVERBROOK SHELTER</div>`)[0];
+            popup_a19c1c7434e64ed38875db5c607526c3.setContent(html_4aae09958a98495db35949dae09e1d6f);
+        
+
+        marker_a72459ee7c0d4c7d86bf3a14466907c0.bindPopup(popup_a19c1c7434e64ed38875db5c607526c3)
+        ;
+
+        
+    
+    
+            var marker_90db519dc7474eeb9bb7b6daaab5ec0d = L.marker(
+                [40.38285200000109, -79.99678100000085],
+                {}
+            ).addTo(feature_group_93ecf0991697463c9f45f199018821fa);
+        
+    
+        var popup_5f0d4a5058944e858b23bd1a6f74bc11 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c692509fcef64fe7b1a5bdcff7b8d1c3 = $(`<div id="html_c692509fcef64fe7b1a5bdcff7b8d1c3" style="width: 100.0%; height: 100.0%;"> SOUTH BUSWAY + GLENBURY AVE RAMP</div>`)[0];
+            popup_5f0d4a5058944e858b23bd1a6f74bc11.setContent(html_c692509fcef64fe7b1a5bdcff7b8d1c3);
+        
+
+        marker_90db519dc7474eeb9bb7b6daaab5ec0d.bindPopup(popup_5f0d4a5058944e858b23bd1a6f74bc11)
+        ;
+
+        
+    
+    
+            var marker_5996468679b345baa2ccd2ed234b5d7a = L.marker(
+                [40.37566400000039, -79.98368800000169],
+                {}
+            ).addTo(feature_group_93ecf0991697463c9f45f199018821fa);
+        
+    
+        var popup_8baece857a174127856cf1a9c32d83b8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f6d271df5ea34620b7e847bb743508ff = $(`<div id="html_f6d271df5ea34620b7e847bb743508ff" style="width: 100.0%; height: 100.0%;"> HWY RT 51 + GREENLEE RD</div>`)[0];
+            popup_8baece857a174127856cf1a9c32d83b8.setContent(html_f6d271df5ea34620b7e847bb743508ff);
+        
+
+        marker_5996468679b345baa2ccd2ed234b5d7a.bindPopup(popup_8baece857a174127856cf1a9c32d83b8)
+        ;
+
+        
+    
+    
+            var marker_8c3e087660214218a4800db109da0d8c = L.marker(
+                [40.370795999999, -79.98234799999966],
+                {}
+            ).addTo(feature_group_93ecf0991697463c9f45f199018821fa);
+        
+    
+        var popup_66b6748b7cd440b1bb763f32b7de8e4c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5564771285e840d2a950d0c638b997d5 = $(`<div id="html_5564771285e840d2a950d0c638b997d5" style="width: 100.0%; height: 100.0%;"> HWY RT 51 + DELCO</div>`)[0];
+            popup_66b6748b7cd440b1bb763f32b7de8e4c.setContent(html_5564771285e840d2a950d0c638b997d5);
+        
+
+        marker_8c3e087660214218a4800db109da0d8c.bindPopup(popup_66b6748b7cd440b1bb763f32b7de8e4c)
+        ;
+
+        
+    
+    
+            var marker_acf61b45a1074200bf8d718d7631b3df = L.marker(
+                [40.363980000001, -79.98432399999925],
+                {}
+            ).addTo(feature_group_93ecf0991697463c9f45f199018821fa);
+        
+    
+        var popup_95cfb539a08a415395c1d75cf727e033 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_217ba94ab48849b6910baa21b9b3b5a1 = $(`<div id="html_217ba94ab48849b6910baa21b9b3b5a1" style="width: 100.0%; height: 100.0%;"> HWY RT 51 + BROWNSVILLE</div>`)[0];
+            popup_95cfb539a08a415395c1d75cf727e033.setContent(html_217ba94ab48849b6910baa21b9b3b5a1);
+        
+
+        marker_acf61b45a1074200bf8d718d7631b3df.bindPopup(popup_95cfb539a08a415395c1d75cf727e033)
+        ;
+
+        
+    
+    
+            var marker_75b6c4ad33bf4b7ba3f4ddea7ee42b9d = L.marker(
+                [40.35670200000048, -79.98048700000052],
+                {}
+            ).addTo(feature_group_93ecf0991697463c9f45f199018821fa);
+        
+    
+        var popup_4a629fa300a14be8b6ea2771067c6f6b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_967a0b0d36604783ac0f973719edefdc = $(`<div id="html_967a0b0d36604783ac0f973719edefdc" style="width: 100.0%; height: 100.0%;"> HWY RT 51 + GLEN ELM</div>`)[0];
+            popup_4a629fa300a14be8b6ea2771067c6f6b.setContent(html_967a0b0d36604783ac0f973719edefdc);
+        
+
+        marker_75b6c4ad33bf4b7ba3f4ddea7ee42b9d.bindPopup(popup_4a629fa300a14be8b6ea2771067c6f6b)
+        ;
+
+        
+    
+    
+            var marker_769ee3ef88724f1b8709bac901f8b232 = L.marker(
+                [40.34404400000077, -79.97174000000143],
+                {}
+            ).addTo(feature_group_93ecf0991697463c9f45f199018821fa);
+        
+    
+        var popup_c223b23b985a43d898a50b3952162412 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_52607d976be9445e8f4c5dc60bffc152 = $(`<div id="html_52607d976be9445e8f4c5dc60bffc152" style="width: 100.0%; height: 100.0%;"> HWY RT 51 + GRACE</div>`)[0];
+            popup_c223b23b985a43d898a50b3952162412.setContent(html_52607d976be9445e8f4c5dc60bffc152);
+        
+
+        marker_769ee3ef88724f1b8709bac901f8b232.bindPopup(popup_c223b23b985a43d898a50b3952162412)
+        ;
+
+        
+    
+    
+            var marker_33101674e2f14bb2b81f906de4e7772a = L.marker(
+                [40.34210199999927, -79.96675099999838],
+                {}
+            ).addTo(feature_group_93ecf0991697463c9f45f199018821fa);
+        
+    
+        var popup_080cb2bea79445cca97a633e0165dfee = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c5f71397b6ab422c848cb5fc8d40e1e9 = $(`<div id="html_c5f71397b6ab422c848cb5fc8d40e1e9" style="width: 100.0%; height: 100.0%;"> HWY RT 51 + CLOVERLEAF TOWERS</div>`)[0];
+            popup_080cb2bea79445cca97a633e0165dfee.setContent(html_c5f71397b6ab422c848cb5fc8d40e1e9);
+        
+
+        marker_33101674e2f14bb2b81f906de4e7772a.bindPopup(popup_080cb2bea79445cca97a633e0165dfee)
+        ;
+
+        
+    
+    
+            var marker_f81c8f3a707a4b46ab365519fcfcf976 = L.marker(
+                [40.34049399999914, -79.96438900000035],
+                {}
+            ).addTo(feature_group_93ecf0991697463c9f45f199018821fa);
+        
+    
+        var popup_371c519562e54da0bb1a313b084d0d7a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9aaec6f3a2274cb4a18910fdb44079e7 = $(`<div id="html_9aaec6f3a2274cb4a18910fdb44079e7" style="width: 100.0%; height: 100.0%;"> HWY RT 51 + OLD CLAIRTON FS</div>`)[0];
+            popup_371c519562e54da0bb1a313b084d0d7a.setContent(html_9aaec6f3a2274cb4a18910fdb44079e7);
+        
+
+        marker_f81c8f3a707a4b46ab365519fcfcf976.bindPopup(popup_371c519562e54da0bb1a313b084d0d7a)
+        ;
+
+        
+    
+    
+            var marker_0fc146056c7b4aebb45bf9ca919b3f1f = L.marker(
+                [40.33628800000099, -79.94588000000121],
+                {}
+            ).addTo(feature_group_93ecf0991697463c9f45f199018821fa);
+        
+    
+        var popup_04aaeb0a9c0e40ac89f577edb4b6e44f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b5b327e1fa0645b38b8f57b696e79b0e = $(`<div id="html_b5b327e1fa0645b38b8f57b696e79b0e" style="width: 100.0%; height: 100.0%;"> CENTURY III MALL PARK AND RIDE LOT AT SHELTER</div>`)[0];
+            popup_04aaeb0a9c0e40ac89f577edb4b6e44f.setContent(html_b5b327e1fa0645b38b8f57b696e79b0e);
+        
+
+        marker_0fc146056c7b4aebb45bf9ca919b3f1f.bindPopup(popup_04aaeb0a9c0e40ac89f577edb4b6e44f)
+        ;
+
+        
+    
+    
+            var marker_e28689ed8ccf43b7a7b541dfaf966c20 = L.marker(
+                [40.328064999999086, -79.94489799999947],
+                {}
+            ).addTo(feature_group_93ecf0991697463c9f45f199018821fa);
+        
+    
+        var popup_7ad50249af8b4094b5a6d0b0cd774a11 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4292ba5d63e349ee86766760377ccefa = $(`<div id="html_4292ba5d63e349ee86766760377ccefa" style="width: 100.0%; height: 100.0%;"> HWY RT 51 + E BRUCETON FS</div>`)[0];
+            popup_7ad50249af8b4094b5a6d0b0cd774a11.setContent(html_4292ba5d63e349ee86766760377ccefa);
+        
+
+        marker_e28689ed8ccf43b7a7b541dfaf966c20.bindPopup(popup_7ad50249af8b4094b5a6d0b0cd774a11)
+        ;
+
+        
+    
+    
+            var marker_b76b4a3c945d4a9b90cd19aa0c278f28 = L.marker(
+                [40.32118400000089, -79.94231799999878],
+                {}
+            ).addTo(feature_group_93ecf0991697463c9f45f199018821fa);
+        
+    
+        var popup_8329bbcbade34aedbd52e2d0b4e2dbab = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c740cac62c214bb18c5a894e4727c9b7 = $(`<div id="html_c740cac62c214bb18c5a894e4727c9b7" style="width: 100.0%; height: 100.0%;"> HWY RT 51 + LEWIS RUN</div>`)[0];
+            popup_8329bbcbade34aedbd52e2d0b4e2dbab.setContent(html_c740cac62c214bb18c5a894e4727c9b7);
+        
+
+        marker_b76b4a3c945d4a9b90cd19aa0c278f28.bindPopup(popup_8329bbcbade34aedbd52e2d0b4e2dbab)
+        ;
+
+        
+    
+    
+            var marker_bfb082579bbe46efbb6f71f57f1cf6b8 = L.marker(
+                [40.29314300000085, -79.91091200000052],
+                {}
+            ).addTo(feature_group_93ecf0991697463c9f45f199018821fa);
+        
+    
+        var popup_ac1a4eb1c7384ca4969381e70e5ed399 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ee428d44e691413298b9147d6a237eae = $(`<div id="html_ee428d44e691413298b9147d6a237eae" style="width: 100.0%; height: 100.0%;"> LARGE PARK-AND-RIDE OUTBOUND PLATFORM</div>`)[0];
+            popup_ac1a4eb1c7384ca4969381e70e5ed399.setContent(html_ee428d44e691413298b9147d6a237eae);
+        
+
+        marker_bfb082579bbe46efbb6f71f57f1cf6b8.bindPopup(popup_ac1a4eb1c7384ca4969381e70e5ed399)
+        ;
+
+        
+    
+    
+            var marker_c675a1e1ce7f48cf8409e9b907b6025d = L.marker(
+                [40.29487500000106, -79.91038299999967],
+                {}
+            ).addTo(feature_group_93ecf0991697463c9f45f199018821fa);
+        
+    
+        var popup_09fa2ef9b5544a5bbdfec38478421381 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4018902757334e98bf3927876d406e19 = $(`<div id="html_4018902757334e98bf3927876d406e19" style="width: 100.0%; height: 100.0%;"> LARGE PARK AND RIDE</div>`)[0];
+            popup_09fa2ef9b5544a5bbdfec38478421381.setContent(html_4018902757334e98bf3927876d406e19);
+        
+
+        marker_c675a1e1ce7f48cf8409e9b907b6025d.bindPopup(popup_09fa2ef9b5544a5bbdfec38478421381)
+        ;
+
+        
+    
+    
+            map_d1d978ce12dd4dcf9987cab880c81e94.fitBounds(
+                [[40.29237, -80.011849], [40.44164, -79.910358]],
+                {}
+            );
+        
+    
+            var feature_group_0370c87254a74ace8a4bdb3b17290450 = L.featureGroup(
+                {}
+            ).addTo(map_d1d978ce12dd4dcf9987cab880c81e94);
+        
+    
+            var marker_a7b5e06602a042c1850dc3c1b8c0a6a2 = L.marker(
+                [40.34088134765625, -79.96485900878906],
+                {}
+            ).addTo(feature_group_0370c87254a74ace8a4bdb3b17290450);
+        
+    
+            var icon_f3c4a57d9bd7493e9e0e3b24fa69360b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a7b5e06602a042c1850dc3c1b8c0a6a2.setIcon(icon_f3c4a57d9bd7493e9e0e3b24fa69360b);
+        
+    
+        var popup_ecfca7d9b7484fa2bf05f19f1a105cfa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9c9aae521e84437ca56905aa3a37cf01 = $(`<div id="html_9c9aae521e84437ca56905aa3a37cf01" style="width: 100.0%; height: 100.0%;">Vehicle ID: 5929 Bus is approaching CENTURY III MALL PARK AND RIDE LOT AT SHELTER at 20220118 18:16</div>`)[0];
+            popup_ecfca7d9b7484fa2bf05f19f1a105cfa.setContent(html_9c9aae521e84437ca56905aa3a37cf01);
+        
+
+        marker_a7b5e06602a042c1850dc3c1b8c0a6a2.bindPopup(popup_ecfca7d9b7484fa2bf05f19f1a105cfa)
+        ;
+
+        
+    
+</script>

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static',filename='routes.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<h1 class="title">Bus Routes</h1>
+
+<div class="route_list">
+    {% for fil in files %}
+    <a class="cont" href="/routes/{{ fil }}.html" class="link">
+    <div class="card">
+        <div class="card-body">
+            <h3 class="card-title">{{ fil }}</h3>
+        </div>
+    </div>
+</a>
+    {% endfor %}
+</div>
+
+{% endblock %}

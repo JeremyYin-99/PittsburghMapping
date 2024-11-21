@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_2da41c36dfa94ffa81c032a3e5ecec50 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_2da41c36dfa94ffa81c032a3e5ecec50" ></div>
+        
+</body>
+<script>    
+    
+            var map_2da41c36dfa94ffa81c032a3e5ecec50 = L.map(
+                "map_2da41c36dfa94ffa81c032a3e5ecec50",
+                {
+                    center: [40.441, -79.99],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_c728c89c56d248ceaa3b817de900320a = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_2da41c36dfa94ffa81c032a3e5ecec50);
+        
+    
+            var feature_group_63f0b607a0bc45c2a5849c7733d0125f = L.featureGroup(
+                {}
+            ).addTo(map_2da41c36dfa94ffa81c032a3e5ecec50);
+        
+    
+            var poly_line_ad48bc895c8a4ab89324744972ea76bc = L.polyline(
+                [[40.44256299999947, -79.99613899999963], [40.442397, -79.995622], [40.441864, -79.994223], [40.441468, -79.993597], [40.441372, -79.99332], [40.441375, -79.993044], [40.44152, -79.992418], [40.441591, -79.992208], [40.441703, -79.992052], [40.442738, -79.991433], [40.443967, -79.990517], [40.444955, -79.990071], [40.445467, -79.98995], [40.44563699999879, -79.98990899999923], [40.446156, -79.989987], [40.446588, -79.9901], [40.447102, -79.990347], [40.447485, -79.990614], [40.451488, -79.9951], [40.45214, -79.99578], [40.452614, -79.996178], [40.453178, -79.996549], [40.453747, -79.996844], [40.456433, -79.997761], [40.45929, -79.998971], [40.460279, -79.999309], [40.464151, -79.999551], [40.464782, -79.999626], [40.465247, -79.999744], [40.465777, -79.999963], [40.466344, -80.000309], [40.471848, -80.004387], [40.474049, -80.005826], [40.475444, -80.006845], [40.47592, -80.007144], [40.47632, -80.007328], [40.476729, -80.007439], [40.477131, -80.007481], [40.479759, -80.007236], [40.480758, -80.00718], [40.481612, -80.007218], [40.482327, -80.007321], [40.483021, -80.007485], [40.486259, -80.008699], [40.486565, -80.008801], [40.488444, -80.009114], [40.491078, -80.00944], [40.491833, -80.009577], [40.492288, -80.009711], [40.492731, -80.009905], [40.493313, -80.010267], [40.494556, -80.011365], [40.494974, -80.011686], [40.495738, -80.012122], [40.497836, -80.012747], [40.498334, -80.012877], [40.498837, -80.01291], [40.499013, -80.012861], [40.49912600000077, -80.01282899999913], [40.49913, -80.01287], [40.49945, -80.01278], [40.4998, -80.01259], [40.50147, -80.01137], [40.50145500000116, -80.01132999999882], [40.50147, -80.01137], [40.50332, -80.0104], [40.50398, -80.00992], [40.50472, -80.00924], [40.50562, -80.00821], [40.50559399999887, -80.00817200000111], [40.50562, -80.00821], [40.50679, -80.00683], [40.50838, -80.00479], [40.50909, -80.00413], [40.50907299999995, -80.00408099999969], [40.50909, -80.00413], [40.50942, -80.00392], [40.50977, -80.00378], [40.51013, -80.00368], [40.51063, -80.00364], [40.51166, -80.00376], [40.51166399999971, -80.00371900000077], [40.51166, -80.00376], [40.51645, -80.00444], [40.51645000000017, -80.00439699999859], [40.51645, -80.00444], [40.51916, -80.00482], [40.51916699999898, -80.0047580000005], [40.51916, -80.00482], [40.5218, -80.0052], [40.52180499999879, -80.00513699999921], [40.5218, -80.0052], [40.52289, -80.00531], [40.52536, -80.00542], [40.525362999998784, -80.00536799999986], [40.52536, -80.00542], [40.52578, -80.00545], [40.52625, -80.00556], [40.5268, -80.00578], [40.52680799999921, -80.00572399999909], [40.5268, -80.00578], [40.52709, -80.00592], [40.52762, -80.00629], [40.52812, -80.00678], [40.52814800000068, -80.00673199999987], [40.52812, -80.00678], [40.52854, -80.00731], [40.52927, -80.00839], [40.52982, -80.00908], [40.53042, -80.00964], [40.53044300000078, -80.00958199999961], [40.530686, -80.009815], [40.531292, -80.010185], [40.532233, -80.010622], [40.532927, -80.010843], [40.533482, -80.010929], [40.534154, -80.010933], [40.535368, -80.010809], [40.535915, -80.0108], [40.536504, -80.010871], [40.537574, -80.011153], [40.537691999999566, -80.0111680000015], [40.53768, -80.01122], [40.5398, -80.011875], [40.54029, -80.01208], [40.54029900000073, -80.01201899999974], [40.54029, -80.01208], [40.54085, -80.01228], [40.54128, -80.01249], [40.54253, -80.01333], [40.54254900000043, -80.01326800000164], [40.54253, -80.01333], [40.5436, -80.01411], [40.544273, -80.014799], [40.545359, -80.01616], [40.545914, -80.016773], [40.546241, -80.016969], [40.54625999999853, -80.01698000000091], [40.54657, -80.017335], [40.547248, -80.017791], [40.549974, -80.019027], [40.550331, -80.019082], [40.55034199999848, -80.01908400000102], [40.550721, -80.019355], [40.552127, -80.019978], [40.553962, -80.020949], [40.554314, -80.021046], [40.554336000000944, -80.02105200000038], [40.554197, -80.021447], [40.553532, -80.021935], [40.552466, -80.022946], [40.552357, -80.023134], [40.55226099999861, -80.02329999999832], [40.551933, -80.023476], [40.551208, -80.024219], [40.551022, -80.024458], [40.549792, -80.026808], [40.54964, -80.027048], [40.548863, -80.027784], [40.548363, -80.028188], [40.546893, -80.028939], [40.54659, -80.029134], [40.545661, -80.030162], [40.545258, -80.03072], [40.544764, -80.031524], [40.544477, -80.032095], [40.544365, -80.03245], [40.544302, -80.033035], [40.54458, -80.035918], [40.544938, -80.0359], [40.54510199999956, -80.03587399999869], [40.54602, -80.036087], [40.547555, -80.036737], [40.548172, -80.036945], [40.548352, -80.036929], [40.54849099999871, -80.03691699999962], [40.548825, -80.03705], [40.549862, -80.037092], [40.550409, -80.03716], [40.552124, -80.037742], [40.552482, -80.037786], [40.55253200000005, -80.03779199999911], [40.552761, -80.03798], [40.555021, -80.038778], [40.555847, -80.03901], [40.556027, -80.039001], [40.556153999999175, -80.0389950000012], [40.556425, -80.039153], [40.558106, -80.039575], [40.558823, -80.039681], [40.559255, -80.039684], [40.561552, -80.039335], [40.56247, -80.039155], [40.566272, -80.037989], [40.56632600000019, -80.03796799999927], [40.566598, -80.037981], [40.571642, -80.036956], [40.5717870000008, -80.03689999999945], [40.573175, -80.036979], [40.58118, -80.037886], [40.581617, -80.037962], [40.58199, -80.038096], [40.582373, -80.038323], [40.582867, -80.038751], [40.583213, -80.039152], [40.583446, -80.039496], [40.583719, -80.040014], [40.584616, -80.042637], [40.584806, -80.043111], [40.585016, -80.043491], [40.585191, -80.043746], [40.58593, -80.044506], [40.586756, -80.044405], [40.58679, -80.04306], [40.58672, -80.04256], [40.58637, -80.04203], [40.58619, -80.04166], [40.58616, -80.04152], [40.58619, -80.0411], [40.58616300000095, -80.04110499999864], [40.58619, -80.0411], [40.58538, -80.03752], [40.5853539999985, -80.03753399999962], [40.58538, -80.03752], [40.58515, -80.03647], [40.58515, -80.03634], [40.58524, -80.03615], [40.58616, -80.03576], [40.58626, -80.03577], [40.58659, -80.03562], [40.58672, -80.03546], [40.58678, -80.0353], [40.58681, -80.03508], [40.58679, -80.03228], [40.58674, -80.03154], [40.586745, -80.03035], [40.58666799999871, -80.03021599999923]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_63f0b607a0bc45c2a5849c7733d0125f);
+        
+    
+        var popup_3382b3ed18b5443f8f0a1db2853d86fa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b52d40e6628346c48d0468af54c96559 = $(`<div id="html_b52d40e6628346c48d0468af54c96559" style="width: 100.0%; height: 100.0%;">O12</div>`)[0];
+            popup_3382b3ed18b5443f8f0a1db2853d86fa.setContent(html_b52d40e6628346c48d0468af54c96559);
+        
+
+        poly_line_ad48bc895c8a4ab89324744972ea76bc.bindPopup(popup_3382b3ed18b5443f8f0a1db2853d86fa)
+        ;
+
+        
+    
+    
+            var feature_group_106b0727ae424f33b7f71d4c1984200d = L.featureGroup(
+                {}
+            ).addTo(map_2da41c36dfa94ffa81c032a3e5ecec50);
+        
+    
+            var marker_cfe55265ca9e4992af18427952f20c64 = L.marker(
+                [40.44264999999881, -80.00441299999818],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_2ce4126f099145af9bad6739ccbff59e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a32789ed263e419b98e07fe6fe1d2241 = $(`<div id="html_a32789ed263e419b98e07fe6fe1d2241" style="width: 100.0%; height: 100.0%;"> STANWIX ST + PENN AVE (GATEWAY #2)</div>`)[0];
+            popup_2ce4126f099145af9bad6739ccbff59e.setContent(html_a32789ed263e419b98e07fe6fe1d2241);
+        
+
+        marker_cfe55265ca9e4992af18427952f20c64.bindPopup(popup_2ce4126f099145af9bad6739ccbff59e)
+        ;
+
+        
+    
+    
+            var marker_f1d86447107146c3bc8d9a50cc0c3409 = L.marker(
+                [40.44180200000057, -80.00208199999925],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_8f5a943028dd40b3b79de9129a88db35 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_972623f06f8b4c78adc302287f14c68c = $(`<div id="html_972623f06f8b4c78adc302287f14c68c" style="width: 100.0%; height: 100.0%;"> LIBERTY AVE + MARKET ST</div>`)[0];
+            popup_8f5a943028dd40b3b79de9129a88db35.setContent(html_972623f06f8b4c78adc302287f14c68c);
+        
+
+        marker_f1d86447107146c3bc8d9a50cc0c3409.bindPopup(popup_8f5a943028dd40b3b79de9129a88db35)
+        ;
+
+        
+    
+    
+            var marker_7c671f69764c48b3ab67589f38409aa0 = L.marker(
+                [40.442834999999, -79.99810499999836],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_f911b76a9ead4d689bc891690ea84e51 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0b2b64024f384ee689913eab5460b23e = $(`<div id="html_0b2b64024f384ee689913eab5460b23e" style="width: 100.0%; height: 100.0%;"> LIBERTY AVE + 9TH ST</div>`)[0];
+            popup_f911b76a9ead4d689bc891690ea84e51.setContent(html_0b2b64024f384ee689913eab5460b23e);
+        
+
+        marker_7c671f69764c48b3ab67589f38409aa0.bindPopup(popup_f911b76a9ead4d689bc891690ea84e51)
+        ;
+
+        
+    
+    
+            var marker_2fab134e847344f9826f62763106ceec = L.marker(
+                [40.44256299999947, -79.99613899999963],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_55bf7d5a990f4bbdaf95ad2eb3139352 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_52a773e43b764c608d622a5c9eeee50e = $(`<div id="html_52a773e43b764c608d622a5c9eeee50e" style="width: 100.0%; height: 100.0%;"> SEVENTH AVE + WILLIAM PENN PL</div>`)[0];
+            popup_55bf7d5a990f4bbdaf95ad2eb3139352.setContent(html_52a773e43b764c608d622a5c9eeee50e);
+        
+
+        marker_2fab134e847344f9826f62763106ceec.bindPopup(popup_55bf7d5a990f4bbdaf95ad2eb3139352)
+        ;
+
+        
+    
+    
+            var marker_df11a6434c1e4763a1ce84d0ef3ee2d9 = L.marker(
+                [40.49912600000077, -80.01282899999913],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_3ced5b1fe9fb4960841856ddf7f3d665 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_262f80da105740779ebb7c2dadc12085 = $(`<div id="html_262f80da105740779ebb7c2dadc12085" style="width: 100.0%; height: 100.0%;"> MCKNIGHT RD + IVORY AVE RAMP FS</div>`)[0];
+            popup_3ced5b1fe9fb4960841856ddf7f3d665.setContent(html_262f80da105740779ebb7c2dadc12085);
+        
+
+        marker_df11a6434c1e4763a1ce84d0ef3ee2d9.bindPopup(popup_3ced5b1fe9fb4960841856ddf7f3d665)
+        ;
+
+        
+    
+    
+            var marker_6f68f8721fd64d80be4c8ff40d7500f3 = L.marker(
+                [40.50145500000116, -80.01132999999882],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_15bec61a14cd45c6950dd23ee9492e03 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cb2c7e82ecf54f048518e83624eb4a07 = $(`<div id="html_cb2c7e82ecf54f048518e83624eb4a07" style="width: 100.0%; height: 100.0%;"> MCKNIGHT RD + MCKNIGHT-IVORY BLDG</div>`)[0];
+            popup_15bec61a14cd45c6950dd23ee9492e03.setContent(html_cb2c7e82ecf54f048518e83624eb4a07);
+        
+
+        marker_6f68f8721fd64d80be4c8ff40d7500f3.bindPopup(popup_15bec61a14cd45c6950dd23ee9492e03)
+        ;
+
+        
+    
+    
+            var marker_c11f9afa560e450b85f959936255b88f = L.marker(
+                [40.50559399999887, -80.00817200000111],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_2481c03733194eb0bc66e285f1128e04 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1789f821ae3b4f9e90ca1e2b589ef744 = $(`<div id="html_1789f821ae3b4f9e90ca1e2b589ef744" style="width: 100.0%; height: 100.0%;"> MCKNIGHT RD + NELSON RUN</div>`)[0];
+            popup_2481c03733194eb0bc66e285f1128e04.setContent(html_1789f821ae3b4f9e90ca1e2b589ef744);
+        
+
+        marker_c11f9afa560e450b85f959936255b88f.bindPopup(popup_2481c03733194eb0bc66e285f1128e04)
+        ;
+
+        
+    
+    
+            var marker_6a611e03ecc147999d003607654648ea = L.marker(
+                [40.50907299999995, -80.00408099999969],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_4d8aad4f50b74445be79204d62a38786 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6f2b59f577674331b91e2bfce753120c = $(`<div id="html_6f2b59f577674331b91e2bfce753120c" style="width: 100.0%; height: 100.0%;"> MCKNIGHT RD + STEVENS DR</div>`)[0];
+            popup_4d8aad4f50b74445be79204d62a38786.setContent(html_6f2b59f577674331b91e2bfce753120c);
+        
+
+        marker_6a611e03ecc147999d003607654648ea.bindPopup(popup_4d8aad4f50b74445be79204d62a38786)
+        ;
+
+        
+    
+    
+            var marker_bfe24288ce004462b1f2608da35d743b = L.marker(
+                [40.51166399999971, -80.00371900000077],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_26ad63efda604bd09056351db47bdf83 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ea8f417f925344c2ac216ba8b7cee8ba = $(`<div id="html_ea8f417f925344c2ac216ba8b7cee8ba" style="width: 100.0%; height: 100.0%;"> MCKNIGHT RD + BROOKVIEW LN</div>`)[0];
+            popup_26ad63efda604bd09056351db47bdf83.setContent(html_ea8f417f925344c2ac216ba8b7cee8ba);
+        
+
+        marker_bfe24288ce004462b1f2608da35d743b.bindPopup(popup_26ad63efda604bd09056351db47bdf83)
+        ;
+
+        
+    
+    
+            var marker_8465590c8a414743af8764ce62c96869 = L.marker(
+                [40.51645000000017, -80.00439699999859],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_0ae26fcda9a542a79172b94682084cea = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8b78237be324473ea8f2649e35b59bbb = $(`<div id="html_8b78237be324473ea8f2649e35b59bbb" style="width: 100.0%; height: 100.0%;"> MCKNIGHT RD + U-HAUL</div>`)[0];
+            popup_0ae26fcda9a542a79172b94682084cea.setContent(html_8b78237be324473ea8f2649e35b59bbb);
+        
+
+        marker_8465590c8a414743af8764ce62c96869.bindPopup(popup_0ae26fcda9a542a79172b94682084cea)
+        ;
+
+        
+    
+    
+            var marker_f29352e93d594e66b66d817ed697f14e = L.marker(
+                [40.51916699999898, -80.0047580000005],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_80db254151174060ba970222341458d4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a6c67c2332ea463e94681fa0d15ccb93 = $(`<div id="html_a6c67c2332ea463e94681fa0d15ccb93" style="width: 100.0%; height: 100.0%;"> MCKNIGHT RD + NORTHLAND MEDICAL CENTER</div>`)[0];
+            popup_80db254151174060ba970222341458d4.setContent(html_a6c67c2332ea463e94681fa0d15ccb93);
+        
+
+        marker_f29352e93d594e66b66d817ed697f14e.bindPopup(popup_80db254151174060ba970222341458d4)
+        ;
+
+        
+    
+    
+            var marker_741d262279f54b9f8f97f8c16a2fb189 = L.marker(
+                [40.52180499999879, -80.00513699999921],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_1e0acbdd708149c88d57ea4058e4df79 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f96a06cf33ed434db8a1e532e6338a00 = $(`<div id="html_f96a06cf33ed434db8a1e532e6338a00" style="width: 100.0%; height: 100.0%;"> MCKNIGHT RD + BRAUNLICH </div>`)[0];
+            popup_1e0acbdd708149c88d57ea4058e4df79.setContent(html_f96a06cf33ed434db8a1e532e6338a00);
+        
+
+        marker_741d262279f54b9f8f97f8c16a2fb189.bindPopup(popup_1e0acbdd708149c88d57ea4058e4df79)
+        ;
+
+        
+    
+    
+            var marker_7a6b5ccaa92e4465b59343414153d330 = L.marker(
+                [40.525362999998784, -80.00536799999986],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_08c0edaa4fee4c369ae6f5a4554e2fe5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fb02849131a749d392c29971502c3aac = $(`<div id="html_fb02849131a749d392c29971502c3aac" style="width: 100.0%; height: 100.0%;"> MCKNIGHT RD + NORTH HILLS VILLAGE (CENTER ENT)</div>`)[0];
+            popup_08c0edaa4fee4c369ae6f5a4554e2fe5.setContent(html_fb02849131a749d392c29971502c3aac);
+        
+
+        marker_7a6b5ccaa92e4465b59343414153d330.bindPopup(popup_08c0edaa4fee4c369ae6f5a4554e2fe5)
+        ;
+
+        
+    
+    
+            var marker_d00718d486d14eec86275cb693afd81f = L.marker(
+                [40.52680799999921, -80.00572399999909],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_14b253fb906f4fb9bee750bfbc4ae9b8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7d2a5b70dd5d4b32a7432752f7a256c4 = $(`<div id="html_7d2a5b70dd5d4b32a7432752f7a256c4" style="width: 100.0%; height: 100.0%;"> MCKNIGHT RD + HOUSTON RD FS</div>`)[0];
+            popup_14b253fb906f4fb9bee750bfbc4ae9b8.setContent(html_7d2a5b70dd5d4b32a7432752f7a256c4);
+        
+
+        marker_d00718d486d14eec86275cb693afd81f.bindPopup(popup_14b253fb906f4fb9bee750bfbc4ae9b8)
+        ;
+
+        
+    
+    
+            var marker_0670179b99fc411c85cc671245d72e6e = L.marker(
+                [40.52814800000068, -80.00673199999987],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_cd57d8ba6a7749b09e9d959650079165 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6fadb28e78f343a4bcc8cb7f72f5dc99 = $(`<div id="html_6fadb28e78f343a4bcc8cb7f72f5dc99" style="width: 100.0%; height: 100.0%;"> MCKNIGHT RD + NORTH HILLS VILLAGE (NORTH ENT)</div>`)[0];
+            popup_cd57d8ba6a7749b09e9d959650079165.setContent(html_6fadb28e78f343a4bcc8cb7f72f5dc99);
+        
+
+        marker_0670179b99fc411c85cc671245d72e6e.bindPopup(popup_cd57d8ba6a7749b09e9d959650079165)
+        ;
+
+        
+    
+    
+            var marker_75862bd0a5fc4ae9afa8964f2a5bc15d = L.marker(
+                [40.53044300000078, -80.00958199999961],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_1334925232a74b229bd604ebec9152f0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_67de06a9d4d24413947c7ea930f5f50f = $(`<div id="html_67de06a9d4d24413947c7ea930f5f50f" style="width: 100.0%; height: 100.0%;"> MCKNIGHT RD + SEIBERT RD</div>`)[0];
+            popup_1334925232a74b229bd604ebec9152f0.setContent(html_67de06a9d4d24413947c7ea930f5f50f);
+        
+
+        marker_75862bd0a5fc4ae9afa8964f2a5bc15d.bindPopup(popup_1334925232a74b229bd604ebec9152f0)
+        ;
+
+        
+    
+    
+            var marker_a9e31a38107f474988de47541ebaf0f1 = L.marker(
+                [40.53418099999989, -80.01088999999975],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_1a6beaa671974f748597bcac683cdd2c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d1123e72de1b45589605425d8a08a8b8 = $(`<div id="html_d1123e72de1b45589605425d8a08a8b8" style="width: 100.0%; height: 100.0%;"> MCKNIGHT RD + OLD MCKNIGHT RD FS</div>`)[0];
+            popup_1a6beaa671974f748597bcac683cdd2c.setContent(html_d1123e72de1b45589605425d8a08a8b8);
+        
+
+        marker_a9e31a38107f474988de47541ebaf0f1.bindPopup(popup_1a6beaa671974f748597bcac683cdd2c)
+        ;
+
+        
+    
+    
+            var marker_f72ae901b6cc48d7b7253cf18da04a2b = L.marker(
+                [40.537691999999566, -80.0111680000015],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_d22b027db490451e9835c789b8ba66b5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9797a61e6d084e64887d676cb77f932b = $(`<div id="html_9797a61e6d084e64887d676cb77f932b" style="width: 100.0%; height: 100.0%;"> MCKNIGHT RD + PATRICK PL FS</div>`)[0];
+            popup_d22b027db490451e9835c789b8ba66b5.setContent(html_9797a61e6d084e64887d676cb77f932b);
+        
+
+        marker_f72ae901b6cc48d7b7253cf18da04a2b.bindPopup(popup_d22b027db490451e9835c789b8ba66b5)
+        ;
+
+        
+    
+    
+            var marker_320979db855049508f1f3ff017c422ab = L.marker(
+                [40.54029900000073, -80.01201899999974],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_12ae08653f0e4fd8aa16d0790ad40996 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_36e7653f099b45c8a196a56d70f7c34b = $(`<div id="html_36e7653f099b45c8a196a56d70f7c34b" style="width: 100.0%; height: 100.0%;"> MCKNIGHT RD + MR TIRE</div>`)[0];
+            popup_12ae08653f0e4fd8aa16d0790ad40996.setContent(html_36e7653f099b45c8a196a56d70f7c34b);
+        
+
+        marker_320979db855049508f1f3ff017c422ab.bindPopup(popup_12ae08653f0e4fd8aa16d0790ad40996)
+        ;
+
+        
+    
+    
+            var marker_f4d0170c2b2343eb8bab9cdd9f2ef164 = L.marker(
+                [40.54254900000043, -80.01326800000164],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_46008f19466e4fffa3b9d6ffe6ecb5e5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f69f6e32c8fa4bb994f1b960495ffde2 = $(`<div id="html_f69f6e32c8fa4bb994f1b960495ffde2" style="width: 100.0%; height: 100.0%;"> MCKNIGHT RD + ROSS PARK MALL DR</div>`)[0];
+            popup_46008f19466e4fffa3b9d6ffe6ecb5e5.setContent(html_f69f6e32c8fa4bb994f1b960495ffde2);
+        
+
+        marker_f4d0170c2b2343eb8bab9cdd9f2ef164.bindPopup(popup_46008f19466e4fffa3b9d6ffe6ecb5e5)
+        ;
+
+        
+    
+    
+            var marker_d275b41bb2064419b15e883407f43252 = L.marker(
+                [40.54625999999853, -80.01698000000091],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_64f4ea0062c14b75bd0ff023a2e1fdb7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_59c67212dd574a0f837c77df86aaeb73 = $(`<div id="html_59c67212dd574a0f837c77df86aaeb73" style="width: 100.0%; height: 100.0%;"> MCKNIGHT RD + JOHNANNA DR FS</div>`)[0];
+            popup_64f4ea0062c14b75bd0ff023a2e1fdb7.setContent(html_59c67212dd574a0f837c77df86aaeb73);
+        
+
+        marker_d275b41bb2064419b15e883407f43252.bindPopup(popup_64f4ea0062c14b75bd0ff023a2e1fdb7)
+        ;
+
+        
+    
+    
+            var marker_48e8b4d9a18c40f3b183ee3e9dba4171 = L.marker(
+                [40.55034199999848, -80.01908400000102],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_8f814fc02047471bb022a4b36bab815f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7dae61ddc4094374b75172540fcfd20e = $(`<div id="html_7dae61ddc4094374b75172540fcfd20e" style="width: 100.0%; height: 100.0%;"> MCKNIGHT RD + MCINTYRE RD</div>`)[0];
+            popup_8f814fc02047471bb022a4b36bab815f.setContent(html_7dae61ddc4094374b75172540fcfd20e);
+        
+
+        marker_48e8b4d9a18c40f3b183ee3e9dba4171.bindPopup(popup_8f814fc02047471bb022a4b36bab815f)
+        ;
+
+        
+    
+    
+            var marker_2690f28555804130b5553946f0eee346 = L.marker(
+                [40.554336000000944, -80.02105200000038],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_a0ca788cbbab49b08cd2c5a32831f3a2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_63fcb0c6a1e04aefa63e74c260686259 = $(`<div id="html_63fcb0c6a1e04aefa63e74c260686259" style="width: 100.0%; height: 100.0%;"> MCKNIGHT RD + PEEBLES RD</div>`)[0];
+            popup_a0ca788cbbab49b08cd2c5a32831f3a2.setContent(html_63fcb0c6a1e04aefa63e74c260686259);
+        
+
+        marker_2690f28555804130b5553946f0eee346.bindPopup(popup_a0ca788cbbab49b08cd2c5a32831f3a2)
+        ;
+
+        
+    
+    
+            var marker_345027de72b64947a837dbee6901249e = L.marker(
+                [40.558341000000304, -80.02334200000058],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_74e4d7e4aaeb496e8f7395d9d35f09aa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e67390ddf1754e4f8fa82c37208d4ae6 = $(`<div id="html_e67390ddf1754e4f8fa82c37208d4ae6" style="width: 100.0%; height: 100.0%;"> MCKNIGHT RD + PERRYMONT FS</div>`)[0];
+            popup_74e4d7e4aaeb496e8f7395d9d35f09aa.setContent(html_e67390ddf1754e4f8fa82c37208d4ae6);
+        
+
+        marker_345027de72b64947a837dbee6901249e.bindPopup(popup_74e4d7e4aaeb496e8f7395d9d35f09aa)
+        ;
+
+        
+    
+    
+            var marker_8e888d6efbf84aca877e9bea0c580a2b = L.marker(
+                [40.56806600000068, -80.02387199999961],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_d064114219954d06855de6d8f4d4752a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_201f3524cd524479bbdc258404c705fc = $(`<div id="html_201f3524cd524479bbdc258404c705fc" style="width: 100.0%; height: 100.0%;"> MCKNIGHT RD + DUNCAN</div>`)[0];
+            popup_d064114219954d06855de6d8f4d4752a.setContent(html_201f3524cd524479bbdc258404c705fc);
+        
+
+        marker_8e888d6efbf84aca877e9bea0c580a2b.bindPopup(popup_d064114219954d06855de6d8f4d4752a)
+        ;
+
+        
+    
+    
+            var marker_014097e24789492b929d2fe6289823a2 = L.marker(
+                [40.57186100000116, -80.02343799999854],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_b0189c5e924a4bb381085a6a2555c382 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e59bb141e1b842f4901e2cf9ae425967 = $(`<div id="html_e59bb141e1b842f4901e2cf9ae425967" style="width: 100.0%; height: 100.0%;"> MCKNIGHT RD + CUMBERLAND RD</div>`)[0];
+            popup_b0189c5e924a4bb381085a6a2555c382.setContent(html_e59bb141e1b842f4901e2cf9ae425967);
+        
+
+        marker_014097e24789492b929d2fe6289823a2.bindPopup(popup_b0189c5e924a4bb381085a6a2555c382)
+        ;
+
+        
+    
+    
+            var marker_92c8fa18281740de9983fc41643a5ca6 = L.marker(
+                [40.57674799999951, -80.02597000000058],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_f6a89ff21a6a4f35bd3795f98efab0e7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1c7cff2a1e46423c82889e9d7dce56cb = $(`<div id="html_1c7cff2a1e46423c82889e9d7dce56cb" style="width: 100.0%; height: 100.0%;"> MCKNIGHT RD + ARCADIA DR FS</div>`)[0];
+            popup_f6a89ff21a6a4f35bd3795f98efab0e7.setContent(html_1c7cff2a1e46423c82889e9d7dce56cb);
+        
+
+        marker_92c8fa18281740de9983fc41643a5ca6.bindPopup(popup_f6a89ff21a6a4f35bd3795f98efab0e7)
+        ;
+
+        
+    
+    
+            var marker_4a2624fe50bd4978995f8175fa4726c9 = L.marker(
+                [40.58666799999871, -80.03021599999923],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_1899f049528f4b2ab2b51d2144a3028c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3be82146f51f475b868d68b3c2fe4cb9 = $(`<div id="html_3be82146f51f475b868d68b3c2fe4cb9" style="width: 100.0%; height: 100.0%;"> MCCANDLESS PARK AND RIDE</div>`)[0];
+            popup_1899f049528f4b2ab2b51d2144a3028c.setContent(html_3be82146f51f475b868d68b3c2fe4cb9);
+        
+
+        marker_4a2624fe50bd4978995f8175fa4726c9.bindPopup(popup_1899f049528f4b2ab2b51d2144a3028c)
+        ;
+
+        
+    
+    
+            var marker_e00be35abc664001bd9fbc774f22e904 = L.marker(
+                [40.44256299999947, -79.99613899999963],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_46185bd07a47498998f578defc21d8be = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cfec7cfb6cde49959276212df8911f50 = $(`<div id="html_cfec7cfb6cde49959276212df8911f50" style="width: 100.0%; height: 100.0%;"> SEVENTH AVE + WILLIAM PENN PL</div>`)[0];
+            popup_46185bd07a47498998f578defc21d8be.setContent(html_cfec7cfb6cde49959276212df8911f50);
+        
+
+        marker_e00be35abc664001bd9fbc774f22e904.bindPopup(popup_46185bd07a47498998f578defc21d8be)
+        ;
+
+        
+    
+    
+            var marker_e869de1f185e4f35aec722de695afc01 = L.marker(
+                [40.49912600000077, -80.01282899999913],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_225c0dce62914bc0b11013aae7063d26 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_de956473321a4594be7b638dc279c45a = $(`<div id="html_de956473321a4594be7b638dc279c45a" style="width: 100.0%; height: 100.0%;"> MCKNIGHT RD + IVORY AVE RAMP FS</div>`)[0];
+            popup_225c0dce62914bc0b11013aae7063d26.setContent(html_de956473321a4594be7b638dc279c45a);
+        
+
+        marker_e869de1f185e4f35aec722de695afc01.bindPopup(popup_225c0dce62914bc0b11013aae7063d26)
+        ;
+
+        
+    
+    
+            var marker_dcb1ff42276c4cd5aa0b4e47c502ebce = L.marker(
+                [40.50145500000116, -80.01132999999882],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_2f479a7fe0fe464986d05c4aa30fefb5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_87b56b833bbb47649492c50df7b42493 = $(`<div id="html_87b56b833bbb47649492c50df7b42493" style="width: 100.0%; height: 100.0%;"> MCKNIGHT RD + MCKNIGHT-IVORY BLDG</div>`)[0];
+            popup_2f479a7fe0fe464986d05c4aa30fefb5.setContent(html_87b56b833bbb47649492c50df7b42493);
+        
+
+        marker_dcb1ff42276c4cd5aa0b4e47c502ebce.bindPopup(popup_2f479a7fe0fe464986d05c4aa30fefb5)
+        ;
+
+        
+    
+    
+            var marker_fe939de0f10443b1ad2d2fd1aeb86890 = L.marker(
+                [40.50559399999887, -80.00817200000111],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_3a0e10817262475e920154c530b42ef6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_755b36578c9247dcaabd99b934b81827 = $(`<div id="html_755b36578c9247dcaabd99b934b81827" style="width: 100.0%; height: 100.0%;"> MCKNIGHT RD + NELSON RUN</div>`)[0];
+            popup_3a0e10817262475e920154c530b42ef6.setContent(html_755b36578c9247dcaabd99b934b81827);
+        
+
+        marker_fe939de0f10443b1ad2d2fd1aeb86890.bindPopup(popup_3a0e10817262475e920154c530b42ef6)
+        ;
+
+        
+    
+    
+            var marker_86b0bca00c9d47089a3043d15454c9f0 = L.marker(
+                [40.50907299999995, -80.00408099999969],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_c751b188638e47f287d144e6f1214d99 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e65777e06ec048178733d0432fd0d184 = $(`<div id="html_e65777e06ec048178733d0432fd0d184" style="width: 100.0%; height: 100.0%;"> MCKNIGHT RD + STEVENS DR</div>`)[0];
+            popup_c751b188638e47f287d144e6f1214d99.setContent(html_e65777e06ec048178733d0432fd0d184);
+        
+
+        marker_86b0bca00c9d47089a3043d15454c9f0.bindPopup(popup_c751b188638e47f287d144e6f1214d99)
+        ;
+
+        
+    
+    
+            var marker_03200f9ca6fd46c8ac717b2aa53305d0 = L.marker(
+                [40.51166399999971, -80.00371900000077],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_59849eeb42b6454db24ba60600b47afa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ba55b80bdb5a4dfaae7a5da44cb6d593 = $(`<div id="html_ba55b80bdb5a4dfaae7a5da44cb6d593" style="width: 100.0%; height: 100.0%;"> MCKNIGHT RD + BROOKVIEW LN</div>`)[0];
+            popup_59849eeb42b6454db24ba60600b47afa.setContent(html_ba55b80bdb5a4dfaae7a5da44cb6d593);
+        
+
+        marker_03200f9ca6fd46c8ac717b2aa53305d0.bindPopup(popup_59849eeb42b6454db24ba60600b47afa)
+        ;
+
+        
+    
+    
+            var marker_82ceeb996bc345e2b11fd1403827d93a = L.marker(
+                [40.51645000000017, -80.00439699999859],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_e113beffc6e94b769013cd39eb04d71f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9855cd75ee084ffca0292249b531000d = $(`<div id="html_9855cd75ee084ffca0292249b531000d" style="width: 100.0%; height: 100.0%;"> MCKNIGHT RD + U-HAUL</div>`)[0];
+            popup_e113beffc6e94b769013cd39eb04d71f.setContent(html_9855cd75ee084ffca0292249b531000d);
+        
+
+        marker_82ceeb996bc345e2b11fd1403827d93a.bindPopup(popup_e113beffc6e94b769013cd39eb04d71f)
+        ;
+
+        
+    
+    
+            var marker_47e7ffe5a7b74dc9974a2482b2464e77 = L.marker(
+                [40.51916699999898, -80.0047580000005],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_a3a70b56585841698a98cd285903ba53 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_774bc35480e349ffb1d2b97eab543d1e = $(`<div id="html_774bc35480e349ffb1d2b97eab543d1e" style="width: 100.0%; height: 100.0%;"> MCKNIGHT RD + NORTHLAND MEDICAL CENTER</div>`)[0];
+            popup_a3a70b56585841698a98cd285903ba53.setContent(html_774bc35480e349ffb1d2b97eab543d1e);
+        
+
+        marker_47e7ffe5a7b74dc9974a2482b2464e77.bindPopup(popup_a3a70b56585841698a98cd285903ba53)
+        ;
+
+        
+    
+    
+            var marker_80fa1319996a4da0ae34b4a30ce60791 = L.marker(
+                [40.52180499999879, -80.00513699999921],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_576c4bc3c61d424cbace3eb4708a4f60 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_445d759a17054408bed3d7c3587fcafd = $(`<div id="html_445d759a17054408bed3d7c3587fcafd" style="width: 100.0%; height: 100.0%;"> MCKNIGHT RD + BRAUNLICH </div>`)[0];
+            popup_576c4bc3c61d424cbace3eb4708a4f60.setContent(html_445d759a17054408bed3d7c3587fcafd);
+        
+
+        marker_80fa1319996a4da0ae34b4a30ce60791.bindPopup(popup_576c4bc3c61d424cbace3eb4708a4f60)
+        ;
+
+        
+    
+    
+            var marker_bd6e302f5c2d4a8580a8a124639696fd = L.marker(
+                [40.525362999998784, -80.00536799999986],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_36ceb569d5ff46cb964212715fd83cdd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9631aef3d595423b972df603815a48b3 = $(`<div id="html_9631aef3d595423b972df603815a48b3" style="width: 100.0%; height: 100.0%;"> MCKNIGHT RD + NORTH HILLS VILLAGE (CENTER ENT)</div>`)[0];
+            popup_36ceb569d5ff46cb964212715fd83cdd.setContent(html_9631aef3d595423b972df603815a48b3);
+        
+
+        marker_bd6e302f5c2d4a8580a8a124639696fd.bindPopup(popup_36ceb569d5ff46cb964212715fd83cdd)
+        ;
+
+        
+    
+    
+            var marker_cbbaa8d8048849e9b002c7e7937fab25 = L.marker(
+                [40.52680799999921, -80.00572399999909],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_c01bbff9e6ad430fbb9ecf1aae297cd7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7f489154a1184fbfa8780feafa602fb1 = $(`<div id="html_7f489154a1184fbfa8780feafa602fb1" style="width: 100.0%; height: 100.0%;"> MCKNIGHT RD + HOUSTON RD FS</div>`)[0];
+            popup_c01bbff9e6ad430fbb9ecf1aae297cd7.setContent(html_7f489154a1184fbfa8780feafa602fb1);
+        
+
+        marker_cbbaa8d8048849e9b002c7e7937fab25.bindPopup(popup_c01bbff9e6ad430fbb9ecf1aae297cd7)
+        ;
+
+        
+    
+    
+            var marker_b111638089d44c3fbc6c99d920075af5 = L.marker(
+                [40.52814800000068, -80.00673199999987],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_9b34901d0ce1493fb73f43f4edb6a322 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f4e73089830540ea8ddac5dccae910b0 = $(`<div id="html_f4e73089830540ea8ddac5dccae910b0" style="width: 100.0%; height: 100.0%;"> MCKNIGHT RD + NORTH HILLS VILLAGE (NORTH ENT)</div>`)[0];
+            popup_9b34901d0ce1493fb73f43f4edb6a322.setContent(html_f4e73089830540ea8ddac5dccae910b0);
+        
+
+        marker_b111638089d44c3fbc6c99d920075af5.bindPopup(popup_9b34901d0ce1493fb73f43f4edb6a322)
+        ;
+
+        
+    
+    
+            var marker_c8517689b10e4f79bb44e2270eb8d84e = L.marker(
+                [40.53044300000078, -80.00958199999961],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_fce8fef9acef48b7badf11e318e8915d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3c0d1ff1df3340748c7eed99d041e387 = $(`<div id="html_3c0d1ff1df3340748c7eed99d041e387" style="width: 100.0%; height: 100.0%;"> MCKNIGHT RD + SEIBERT RD</div>`)[0];
+            popup_fce8fef9acef48b7badf11e318e8915d.setContent(html_3c0d1ff1df3340748c7eed99d041e387);
+        
+
+        marker_c8517689b10e4f79bb44e2270eb8d84e.bindPopup(popup_fce8fef9acef48b7badf11e318e8915d)
+        ;
+
+        
+    
+    
+            var marker_1e79d5ff801b41a3a06be6843444df3a = L.marker(
+                [40.537691999999566, -80.0111680000015],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_f374c4ed00f34f87b6c00a6da407d5a7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_98539b2e8bd54a89988a9f6cfc605d95 = $(`<div id="html_98539b2e8bd54a89988a9f6cfc605d95" style="width: 100.0%; height: 100.0%;"> MCKNIGHT RD + PATRICK PL FS</div>`)[0];
+            popup_f374c4ed00f34f87b6c00a6da407d5a7.setContent(html_98539b2e8bd54a89988a9f6cfc605d95);
+        
+
+        marker_1e79d5ff801b41a3a06be6843444df3a.bindPopup(popup_f374c4ed00f34f87b6c00a6da407d5a7)
+        ;
+
+        
+    
+    
+            var marker_890ea2fc7764449182a17c9089a7be15 = L.marker(
+                [40.54029900000073, -80.01201899999974],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_9f944d51e3344486aed2b5967e6bda80 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b207782b2cc44932aa8d2e091c788d7f = $(`<div id="html_b207782b2cc44932aa8d2e091c788d7f" style="width: 100.0%; height: 100.0%;"> MCKNIGHT RD + MR TIRE</div>`)[0];
+            popup_9f944d51e3344486aed2b5967e6bda80.setContent(html_b207782b2cc44932aa8d2e091c788d7f);
+        
+
+        marker_890ea2fc7764449182a17c9089a7be15.bindPopup(popup_9f944d51e3344486aed2b5967e6bda80)
+        ;
+
+        
+    
+    
+            var marker_8f2d971c6d2b40d196653514afe9927f = L.marker(
+                [40.54254900000043, -80.01326800000164],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_515c8e37c5434b0d8183c8356c44105f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dbcb62d1ef9d4cc8a59a8b2360f36613 = $(`<div id="html_dbcb62d1ef9d4cc8a59a8b2360f36613" style="width: 100.0%; height: 100.0%;"> MCKNIGHT RD + ROSS PARK MALL DR</div>`)[0];
+            popup_515c8e37c5434b0d8183c8356c44105f.setContent(html_dbcb62d1ef9d4cc8a59a8b2360f36613);
+        
+
+        marker_8f2d971c6d2b40d196653514afe9927f.bindPopup(popup_515c8e37c5434b0d8183c8356c44105f)
+        ;
+
+        
+    
+    
+            var marker_f9176cd41dd745e08d23f22ac108e96a = L.marker(
+                [40.54625999999853, -80.01698000000091],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_4b20b6b0bf4c49ba8e85f5ec9adb801d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c911611d7c564a07bfe3641bdaed07cb = $(`<div id="html_c911611d7c564a07bfe3641bdaed07cb" style="width: 100.0%; height: 100.0%;"> MCKNIGHT RD + JOHNANNA DR FS</div>`)[0];
+            popup_4b20b6b0bf4c49ba8e85f5ec9adb801d.setContent(html_c911611d7c564a07bfe3641bdaed07cb);
+        
+
+        marker_f9176cd41dd745e08d23f22ac108e96a.bindPopup(popup_4b20b6b0bf4c49ba8e85f5ec9adb801d)
+        ;
+
+        
+    
+    
+            var marker_de4f5dfef2e74493b39e0d1ff349fa28 = L.marker(
+                [40.55034199999848, -80.01908400000102],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_b76aa64502cc4128a4737e418afaedf9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_32453586268e46c68175b65c52d76cfc = $(`<div id="html_32453586268e46c68175b65c52d76cfc" style="width: 100.0%; height: 100.0%;"> MCKNIGHT RD + MCINTYRE RD</div>`)[0];
+            popup_b76aa64502cc4128a4737e418afaedf9.setContent(html_32453586268e46c68175b65c52d76cfc);
+        
+
+        marker_de4f5dfef2e74493b39e0d1ff349fa28.bindPopup(popup_b76aa64502cc4128a4737e418afaedf9)
+        ;
+
+        
+    
+    
+            var marker_f4895fd381e547b1b618f29d42944099 = L.marker(
+                [40.554336000000944, -80.02105200000038],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_16ec23a09ed94b5590ca8591c964987a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_125a54fe065f43eb9b18e19f20536162 = $(`<div id="html_125a54fe065f43eb9b18e19f20536162" style="width: 100.0%; height: 100.0%;"> MCKNIGHT RD + PEEBLES RD</div>`)[0];
+            popup_16ec23a09ed94b5590ca8591c964987a.setContent(html_125a54fe065f43eb9b18e19f20536162);
+        
+
+        marker_f4895fd381e547b1b618f29d42944099.bindPopup(popup_16ec23a09ed94b5590ca8591c964987a)
+        ;
+
+        
+    
+    
+            var marker_13e45a42752345e3aa44664b3fa20ed1 = L.marker(
+                [40.55226099999861, -80.02329999999832],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_d6de85eb639f4466bdf0a20fa608f5d0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2b99273e274b41ea8665770dabe45441 = $(`<div id="html_2b99273e274b41ea8665770dabe45441" style="width: 100.0%; height: 100.0%;"> BABCOCK BLVD AT RODERICK DR</div>`)[0];
+            popup_d6de85eb639f4466bdf0a20fa608f5d0.setContent(html_2b99273e274b41ea8665770dabe45441);
+        
+
+        marker_13e45a42752345e3aa44664b3fa20ed1.bindPopup(popup_d6de85eb639f4466bdf0a20fa608f5d0)
+        ;
+
+        
+    
+    
+            var marker_35bf24e792e44bdf93917c4908e78175 = L.marker(
+                [40.54510199999956, -80.03587399999869],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_e4b1b4ee84e94064b6e1f97579e9c5a5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9a3da605744747638c757de15d85aa24 = $(`<div id="html_9a3da605744747638c757de15d85aa24" style="width: 100.0%; height: 100.0%;"> PERRY HWY AT LOMBARDY DR</div>`)[0];
+            popup_e4b1b4ee84e94064b6e1f97579e9c5a5.setContent(html_9a3da605744747638c757de15d85aa24);
+        
+
+        marker_35bf24e792e44bdf93917c4908e78175.bindPopup(popup_e4b1b4ee84e94064b6e1f97579e9c5a5)
+        ;
+
+        
+    
+    
+            var marker_608e6eef0e0c4e49a9527019ae162bc9 = L.marker(
+                [40.54849099999871, -80.03691699999962],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_9c68a10284804043bb7a593b41b620fa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e1b175e1137a4a74a958fca3be497b1f = $(`<div id="html_e1b175e1137a4a74a958fca3be497b1f" style="width: 100.0%; height: 100.0%;"> PERRY HWY OPP TRION RD (PINES PLAZA)</div>`)[0];
+            popup_9c68a10284804043bb7a593b41b620fa.setContent(html_e1b175e1137a4a74a958fca3be497b1f);
+        
+
+        marker_608e6eef0e0c4e49a9527019ae162bc9.bindPopup(popup_9c68a10284804043bb7a593b41b620fa)
+        ;
+
+        
+    
+    
+            var marker_764ef2ab87064b738150743f6b1c7eaf = L.marker(
+                [40.55253200000005, -80.03779199999911],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_909a1a3523454b8789726593427bb9f3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8b3603ce373a4237aea724b3392a6389 = $(`<div id="html_8b3603ce373a4237aea724b3392a6389" style="width: 100.0%; height: 100.0%;"> PERRY HWY OPP WASHINGTON BLVD</div>`)[0];
+            popup_909a1a3523454b8789726593427bb9f3.setContent(html_8b3603ce373a4237aea724b3392a6389);
+        
+
+        marker_764ef2ab87064b738150743f6b1c7eaf.bindPopup(popup_909a1a3523454b8789726593427bb9f3)
+        ;
+
+        
+    
+    
+            var marker_b354c82b23824eada9f15de0e113338e = L.marker(
+                [40.556153999999175, -80.0389950000012],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_702e680127dc46aea4b2d8ccef001b92 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0236c99b02ed446dafccef19672ea699 = $(`<div id="html_0236c99b02ed446dafccef19672ea699" style="width: 100.0%; height: 100.0%;"> PERRY HWY AT PERRYMONT RD</div>`)[0];
+            popup_702e680127dc46aea4b2d8ccef001b92.setContent(html_0236c99b02ed446dafccef19672ea699);
+        
+
+        marker_b354c82b23824eada9f15de0e113338e.bindPopup(popup_702e680127dc46aea4b2d8ccef001b92)
+        ;
+
+        
+    
+    
+            var marker_5b908cfd418844d88866858ccbdc8026 = L.marker(
+                [40.56632600000019, -80.03796799999927],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_7de5ba6b93e9442883f9246d6f79dee6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1852f91b8ada437e8016b3f4bb247cd7 = $(`<div id="html_1852f91b8ada437e8016b3f4bb247cd7" style="width: 100.0%; height: 100.0%;"> PERRY HWY OPP 19 NORTH DR (CCAC NORTH)</div>`)[0];
+            popup_7de5ba6b93e9442883f9246d6f79dee6.setContent(html_1852f91b8ada437e8016b3f4bb247cd7);
+        
+
+        marker_5b908cfd418844d88866858ccbdc8026.bindPopup(popup_7de5ba6b93e9442883f9246d6f79dee6)
+        ;
+
+        
+    
+    
+            var marker_21abcd18ec564dc982b5dd9e194da6db = L.marker(
+                [40.5717870000008, -80.03689999999945],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_22b6937b54b044dcb2ca9857a923c5bb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_785e8aa8aadb4a93ae5cd7943376bb28 = $(`<div id="html_785e8aa8aadb4a93ae5cd7943376bb28" style="width: 100.0%; height: 100.0%;"> PERRY HWY AT CUMBERLAND RD</div>`)[0];
+            popup_22b6937b54b044dcb2ca9857a923c5bb.setContent(html_785e8aa8aadb4a93ae5cd7943376bb28);
+        
+
+        marker_21abcd18ec564dc982b5dd9e194da6db.bindPopup(popup_22b6937b54b044dcb2ca9857a923c5bb)
+        ;
+
+        
+    
+    
+            var marker_a98e735e87d340caad23c333eab52765 = L.marker(
+                [40.58616300000095, -80.04110499999864],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_5c139b4058d7438993ab0f6a05fbfa66 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_da627cae5b264ec6acf7dc41f01e3830 = $(`<div id="html_da627cae5b264ec6acf7dc41f01e3830" style="width: 100.0%; height: 100.0%;"> BLAZIER DR + TARGET ENTRANCE DRIVE</div>`)[0];
+            popup_5c139b4058d7438993ab0f6a05fbfa66.setContent(html_da627cae5b264ec6acf7dc41f01e3830);
+        
+
+        marker_a98e735e87d340caad23c333eab52765.bindPopup(popup_5c139b4058d7438993ab0f6a05fbfa66)
+        ;
+
+        
+    
+    
+            var marker_6239640dc2f447508f632bccb697a4ee = L.marker(
+                [40.5853539999985, -80.03753399999962],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_5ba070bc08b845d89707336ea79f852a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a4bedf04263c4da0a3deff1a4f2d7f10 = $(`<div id="html_a4bedf04263c4da0a3deff1a4f2d7f10" style="width: 100.0%; height: 100.0%;"> BLAZIER + GIANT EAGLE</div>`)[0];
+            popup_5ba070bc08b845d89707336ea79f852a.setContent(html_a4bedf04263c4da0a3deff1a4f2d7f10);
+        
+
+        marker_6239640dc2f447508f632bccb697a4ee.bindPopup(popup_5ba070bc08b845d89707336ea79f852a)
+        ;
+
+        
+    
+    
+            var marker_7cefd6d983f9446ebfa818cc2cf47c30 = L.marker(
+                [40.58666799999871, -80.03021599999923],
+                {}
+            ).addTo(feature_group_106b0727ae424f33b7f71d4c1984200d);
+        
+    
+        var popup_27997dc1579f4cde9240f11676e9fbfb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_162b720d83994bd4b64f8a88bcc11ac9 = $(`<div id="html_162b720d83994bd4b64f8a88bcc11ac9" style="width: 100.0%; height: 100.0%;"> MCCANDLESS PARK AND RIDE</div>`)[0];
+            popup_27997dc1579f4cde9240f11676e9fbfb.setContent(html_162b720d83994bd4b64f8a88bcc11ac9);
+        
+
+        marker_7cefd6d983f9446ebfa818cc2cf47c30.bindPopup(popup_27997dc1579f4cde9240f11676e9fbfb)
+        ;
+
+        
+    
+    
+            map_2da41c36dfa94ffa81c032a3e5ecec50.fitBounds(
+                [[40.441372, -80.044506], [40.58681, -79.98990899999923]],
+                {}
+            );
+        
+    
+            var feature_group_1796e6ed0e7147e0a812489d348fe28e = L.featureGroup(
+                {}
+            ).addTo(map_2da41c36dfa94ffa81c032a3e5ecec50);
+        
+    
+            var marker_03458ee18da94cea87ec54c22a93354d = L.marker(
+                [40.512481689453125, -80.0038833618164],
+                {}
+            ).addTo(feature_group_1796e6ed0e7147e0a812489d348fe28e);
+        
+    
+            var icon_09bd551e3ca2491ab1850b9787e2b37e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_03458ee18da94cea87ec54c22a93354d.setIcon(icon_09bd551e3ca2491ab1850b9787e2b37e);
+        
+    
+        var popup_6e4fee5e00cc40289a1cce311c260b2f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_129ae190eae94af0b5c837635c02a030 = $(`<div id="html_129ae190eae94af0b5c837635c02a030" style="width: 100.0%; height: 100.0%;">Vehicle ID: 3401 Bus is approaching MCKNIGHT RD + U-HAUL at 20220118 18:13</div>`)[0];
+            popup_6e4fee5e00cc40289a1cce311c260b2f.setContent(html_129ae190eae94af0b5c837635c02a030);
+        
+
+        marker_03458ee18da94cea87ec54c22a93354d.bindPopup(popup_6e4fee5e00cc40289a1cce311c260b2f)
+        ;
+
+        
+    
+</script>

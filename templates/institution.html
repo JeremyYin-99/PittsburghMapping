@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='index.css') }}">
+    <script src="{{url_for('static', filename='javascript.js')}}"></script>
+
+{% endblock %}
+
+{% block content %}
+    <h1 onclick="reveal()">Institutions</h1>
+
+    {% if ilist %}
+    <table id="color">
+    <tr id="color">
+        <th id="color">Name</th>
+        <td id="color">Start Year</td>
+        <td id="color">End Year</td>
+    </tr>
+    {% for i in ilist %}
+    <tr>
+        <th>{{ i.get_name_long() }}</th>
+        <td>{{ i.yearStart }}</td>
+        <td>{{ i.yearEnd }}</td>
+    </tr>
+    {% endfor %}
+    </table>
+    {% endif %}
+{% endblock %}
